@@ -1,0 +1,117 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Title</title>
+    <meta name="description" content="Home page">
+    <meta name="author" content="Alexander Romero">
+    
+    <link rel="icon" href="images/favicon.ico">
+    <meta property="og:title" content="Name of my project">
+    <meta property="og:description"
+        content="Brief description of the purpose of the site/app">
+    <meta property="og:url" content="https://alexanderarj.github.io/sample/index.html">
+    <meta property="og:image" content="https://alexanderarj.github.io/sample/images/hero-image.jpeg">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Red+Hat+Display:ital,wght@0,300..900;1,300..900&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="styles/normalize.css">
+    <link rel="stylesheet" href="styles/base.css">
+
+    <script src="scripts/date.js" defer></script>
+    <script src="scripts/navigation.js" defer></script>
+</head>
+
+<body>
+    <div class="main-container">
+        <header>
+
+            <div class="header-container">
+
+                <div class="logo">
+                    <img src="images/logo.svg" alt="Site logo" width="100" height="100">
+                    <span>Title of the web/app</span>
+                    <button id="ham-btn" class="hamburger" aria-label="Open navigation menu"></button>
+                </div>
+
+                <nav id="nav-bar" class="navigation">
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="join.html">Join</a></li>
+                        <li><a href="join.html">Contact Us</a></li>
+                        <li><a href="join.html">Other</a></li>
+                    </ul>
+                </nav>
+
+            </div>
+
+        </header>
+
+        <main class="main-layout">
+            <!-- Inside a div in case I need to put an image or something over the main image -->
+            <div id="hero-image">
+                <picture>
+                    <source srcset="images/hero.avif" type="image/avif">
+                    <source srcset="images/hero.webp" type="image/webp">
+                    <img src="images/hero.jpg" alt="Image description" fetchpriority="high">
+                </picture>
+            </div>
+
+            <section class="card">
+                <h1>Home</h1>
+                <p>
+                    Lorem, ipsum dolor sit amet consectetur adipisicing elit. 
+                    Ipsa vel aliquam cum sapiente autem accusamus ducimus asperiores 
+                    alias adipisci dolorem sint quo, delectus odit enim assumenda 
+                    quod exercitationem neque! Beatae.
+                </p>
+            </section>
+            
+            <section id="dynamic"></section>
+
+        </main>
+
+        <aside>Aside Content</aside>
+
+        <footer>
+
+            <div class="site-info">
+                <h4>Title</h4>
+                <ul>
+                    <li>12345 My site name</li>
+                    <li>Address</li>
+                    <li>info@sitename.org</li>
+                    <li>(123) 555-222-111</li>
+                </ul>
+            </div>
+
+            <div class="social-links">
+                <a href="https://github.com/AlexanderArj" target="_blank" rel="noopener noreferrer">
+                    <img src="images/github.svg" width="100" height="100" alt="Github author repositories">
+                </a>
+                <a href="https://www.facebook.com/alexander.romero.125323" target="_blank" rel="noopener noreferrer">
+                    <img src="images/facebook.svg" width="100" height="100" alt="Facebook profile">
+                </a>
+                <a href="https://www.linkedin.com/in/alexander-romero-9989b229b" target="_blank" rel="noopener noreferrer">
+                    <img src="images/linkedin.svg" width="100" height="100" alt="LinkedIn">
+                </a>
+            </div>
+
+            <div class="last-updated">
+                <p>Course Name - Project</p>
+                <p>&copy; <span id="year"></span> Alexander Romero, Country ♟️</p>
+                <p id="p-color">Last modification: <span id="lastmodification"></span></p>
+            </div>
+            
+        </footer>
+
+    </div>
+    
+</body>
+</html>
