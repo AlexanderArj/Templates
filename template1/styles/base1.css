@@ -1,0 +1,128 @@
+:root {
+    --body-bg-color: orange;
+    --main-container-color: yellow;
+    --header-bg-color: blue;
+    --footer-bg-color: black;
+    --nav-bg-color: grey;
+    --main-bg-color: green;
+
+    --titles-color: purple;
+    --text-color: #f3f5f8fc;
+    --nav-text-color: #ffffff;
+    --nav-text-color-hover: rgb(252, 165, 5);
+
+    --general-padding: 20px;
+    --sec-padding: 10px;
+    --general-margin: 10px;
+    --border-r-lg: 12px;
+    --border-r-md: 5px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Red Hat Display", sans-serif;
+    background-color: var(--body-bg-color);
+}
+
+.main-container {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    background-color: var(--main-container-color);
+    padding: var(--general-padding);
+}
+
+header {
+    background-color: var(--header-bg-color);
+    padding: var(--sec-padding);
+}
+
+.logo-link {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    gap: 10px;
+}
+
+.logo-area img {
+    width: 40px;
+    height: auto;
+}
+
+.logo-area span {
+    color: var(--titles-color);
+    font-size: x-large;
+}
+
+.hamburger {
+    background: none;
+    border: none;
+    color: #ffffff;
+    cursor: pointer;
+    font-size: 1.5rem;
+}
+
+.hamburger::before { content: "\2630"; }
+.hamburger.show::before { content: "\00D7"; }
+
+.navigation { display: none; }
+.navigation.show { 
+    display: block; 
+    background-color: var(--nav-bg-color);
+    padding: var(--sec-padding);
+    border-radius: var(--border-r-md);
+}
+
+.navigation ul { list-style: none; }
+.navigation a {
+    display: block;
+    padding: 10px 0;
+    text-decoration: none;
+    color: var(--nav-text-color);
+}
+
+.navigation a:hover {
+    color: var(--nav-text-color-hover);
+}
+
+main {
+    background-color: var(--main-bg-color);
+    color: var(--text-color);
+    padding: var(--general-padding);
+    margin: var(--general-margin);
+    border-radius: var(--border-r-lg);
+}
+
+@media screen and (min-width: 700px) {
+    .hamburger { display: none; }
+
+   .navigation {
+        display: flex;
+        align-items: center;
+    }
+
+
+    .navigation ul {
+        display: flex;
+        gap: 20px;
+    }
+
+    .header-container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background-color: var(--header-bg-color); 
+    }
+
+    footer {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        align-items: center;
+        padding: var(--general-padding);
+    }
+}
