@@ -45,15 +45,14 @@
                 </nav>
             </div>
         </header>
-        <!-- usar una clase para el main? -->
         <main>
             <picture>
                 <source srcset="images/hero.avif" type="image/avif">
                 <source srcset="images/hero.webp" type="image/webp">
-                <img src="images/hero.jpg" alt="Descripción de la imagen hero" fetchpriority="high" width="1200" height="600">
+                <img src="images/hero.jpg" alt="Descripción de la imagen hero" fetchpriority="high" width="1200" height="auto">
             </picture>
 
-            <article class="content-card">
+            <article>
                 <h1>Bienvenido al Proyecto</h1>
                 <p>
                     Lorem, ipsum dolor sit amet consectetur adipisicing elit. 
@@ -65,24 +64,22 @@
             
             <div id="dynamic"></div>
 
-            <aside class="complementary-info">
+            <aside>
                 <h2>Información Adicional</h2>
                 <p>Contenido relacionado con la sección principal.</p>
             </aside>
         </main>
 
         <footer>
-            <div>
+            <div class="footer-container">
                 <div class="site-info">
                     <p class="footer-brand">Título</p>
-                    <address>
-                        <ul>
-                            <li>12345 My site name</li>
-                            <li>Dirección Postal, Ciudad</li>
-                            <li><a href="mailto:info@sitename.org">info@sitename.org</a></li>
-                            <li><a href="tel:+123555222111">(123) 555-222-111</a></li>
-                        </ul>
-                    </address>
+                    <ul>
+                        <li>12345 My site name</li>
+                        <li>Dirección Postal, Ciudad</li>
+                        <li>info@sitename.org</li>
+                        <li>(123) 555-222-111</li>
+                    </ul>
                 </div>
 
                 <div class="social-links">
@@ -107,3 +104,4 @@
     </div>
 </body>
 </html>
+
